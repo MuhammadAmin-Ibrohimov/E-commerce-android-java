@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentTop="true"
+    android:layout_height="match_parent"
+    tools:context=".admin.activities.AdminOrderCreditActivity">
+    <include
+        android:id="@+id/delivererToolbar"
+        layout="@layout/seller_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/delivererToolbar"
+        android:layout_above="@+id/linearLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutCustomerTextView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Xaridor shaxsiy ma'lumoti."/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/aboutCustomerTextView2"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/homeIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="20dp"
+                        app:tint="@color/LogoTextColor"
+                        android:src="@drawable/baseline_home_48"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewHome99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Uy raqami:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/homeIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/homeIcon99" />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerHouse"
+                        android:text="Uy raqami"
+                        android:maxWidth="400dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewHome99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewHome99" />
+
+                    <ImageView
+                        android:id="@+id/streetIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_add_road_24"
+                        app:layout_constraintEnd_toEndOf="@+id/homeIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/homeIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerHouse"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewStreet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Ko'chasi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/streetIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/streetIcon99" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerStreet"
+                        android:text="Ko'chasi"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewStreet"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewStreet" />
+
+
+
+                    <ImageView
+                        android:id="@+id/villageIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_holiday_village_24"
+                        app:layout_constraintEnd_toEndOf="@+id/homeIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/homeIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerStreet"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewVillage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="MFY:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/villageIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/villageIcon99" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerVillage"
+                        android:text="MFY"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewVillage"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewVillage" />
+
+                    <ImageView
+                        android:id="@+id/districtIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_location_city_24"
+                        app:layout_constraintEnd_toEndOf="@+id/homeIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/homeIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerVillage"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewDistrict"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Tumani:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/districtIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/districtIcon99" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerDistrict"
+                        android:text="Tumani"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewDistrict"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewDistrict" />
+
+
+
+
+                    <ImageView
+                        android:id="@+id/customerIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/baseline_account_circle_48"
+                        app:layout_constraintBottom_toBottomOf="@+id/homeIcon99"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/homeIcon99"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewName99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="F.I.SH.:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/customerIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/customerIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/customerIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/CustomerName"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:maxWidth="300dp"
+                        android:text="Mamadaliev Dilshodjon"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewName99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewName99" />
+
+                    <ImageView
+                        android:id="@+id/phoneIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_phone_android_36"
+                        app:layout_constraintEnd_toEndOf="@+id/customerIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerName"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewPhone99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Telefon Raqami:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/phoneIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/phoneIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/CustomerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:text="Telefon raqami"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewPhone99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPhone99" />
+
+                    <ImageView
+                        android:id="@+id/phone2Icon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_phone_48"
+                        app:layout_constraintEnd_toEndOf="@+id/customerIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerPhone"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewPhone299"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Telefon Raqami:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/phone2Icon99"
+                        app:layout_constraintEnd_toStartOf="@+id/phone2Icon99"
+                        app:layout_constraintTop_toTopOf="@+id/phone2Icon99"
+                        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/CustomerPhone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:text="Telefon raqami"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewPhone299"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPhone299" />
+
+                    <ImageView
+                        android:id="@+id/birthDayIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_calendar_month_48"
+                        app:layout_constraintEnd_toEndOf="@+id/customerIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerPhone2"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewBirthDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Tug'ilgan sana:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/birthDayIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/birthDayIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/birthDayIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/CustomerBirthDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:text="Tug'ilgan sana"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewBirthDay"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewBirthDay" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutCustomerTextView22"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@+id/cardView"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Xaridor qo'shimcha ma'lumoti."/>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView3"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/aboutCustomerTextView22"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/passportIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="20dp"
+                        app:tint="@color/LogoTextColor"
+                        android:src="@drawable/baseline_view_stream_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewPassport99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Passport seriyasi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/passportIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/passportIcon99" />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerPassport"
+                        android:text="Passport seriyasi"
+                        android:maxWidth="400dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewPassport99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPassport99" />
+
+                    <ImageView
+                        android:id="@+id/passportDateIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_calendar_month_48"
+                        app:layout_constraintEnd_toEndOf="@+id/passportIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/passportIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerPassport"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewPassportDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Berilgan sana:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/passportDateIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/passportDateIcon99" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerPassportGivenDate"
+                        android:text="Berilgan sana"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewPassportDate"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPassportDate" />
+
+
+
+                    <ImageView
+                        android:id="@+id/passportGivenPlaceIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_account_balance_24"
+                        app:layout_constraintEnd_toEndOf="@+id/passportIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/passportIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerPassportGivenDate"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewPassportGivenPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Berilgan joy:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/passportGivenPlaceIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/passportGivenPlaceIcon99" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/CustomerGivenPlace"
+                        android:text="Berilgan joy"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewPassportGivenPlace"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPassportGivenPlace" />
+
+
+                    <ImageView
+                        android:id="@+id/customerWorkPlaceIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/baseline_business_center_48"
+                        app:layout_constraintBottom_toBottomOf="@+id/passportIcon99"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/passportIcon99"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewWorkPlace99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Ish joyi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/customerWorkPlaceIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/customerWorkPlaceIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/customerWorkPlaceIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/CustomerWorkPlace"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:textAlignment="textEnd"
+                        android:maxWidth="300dp"
+                        android:text="Ish joyi"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewWorkPlace99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewWorkPlace99" />
+
+                    <ImageView
+                        android:id="@+id/statusIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_work_24"
+                        app:layout_constraintEnd_toEndOf="@+id/customerWorkPlaceIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerWorkPlace"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewStatus99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Lavozimi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/statusIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/statusIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/statusIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/CustomerStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:text="Lavozimi"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewStatus99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewStatus99" />
+
+                    <ImageView
+                        android:id="@+id/salaryIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/baseline_phone_48"
+                        app:layout_constraintEnd_toEndOf="@+id/customerWorkPlaceIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/CustomerStatus"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewSalary99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Maoshi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/salaryIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/salaryIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/salaryIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/CustomerSalary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:text="Maoshi"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewSalary99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSalary99" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutProductsTextView2"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/cardView3"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Buyurtma tovarlar ro'yxati"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView2"
+                android:layout_below="@+id/aboutProductsTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:id="@+id/creditDetailRecyclerView"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="5sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/longLineBreaker2"
+                        android:background="@color/LogoTextColor" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/orderTotalPrice"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:text="Umumiy summa: 5000000 so'm"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutProductsTextView3"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/cardView2"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Kredit Haqida"/>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView4"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_below="@+id/aboutProductsTextView3"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/creditTypeIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="20dp"
+                        app:tint="@color/LogoTextColor"
+                        android:src="@drawable/baseline_checklist_48"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewCredType99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Kredit turi:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/creditTypeIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/creditTypeIcon99" />
+
+                    <TextView
+                        android:id="@+id/CustomerCreditType"
+                        android:layout_width="300dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxWidth="400dp"
+                        android:text="Kredit turi"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewCredType99"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textViewCredType99" />
+
+                    <ImageView
+                        android:id="@+id/creditInitPaymentIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        app:tint="@color/LogoTextColor"
+                        android:src="@drawable/money"
+                        app:layout_constraintTop_toBottomOf="@+id/creditTypeIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/creditTypeIcon99"/>
+
+                    <TextView
+                        android:id="@+id/textViewInitPayment99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Oldindan to'lov:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/creditInitPaymentIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/creditInitPaymentIcon99" />
+
+                    <TextView
+                        android:id="@+id/CustomerCreditInitialPayment"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxWidth="400dp"
+                        android:text="0 so'm"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewInitPayment99"
+                        app:layout_constraintStart_toStartOf="@+id/CustomerCreditType" />
+                    <ImageView
+                        android:id="@+id/creditDateIcon99"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        app:tint="@color/LogoTextColor"
+                        android:src="@drawable/baseline_access_time_24"
+                        app:layout_constraintTop_toBottomOf="@+id/creditInitPaymentIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/creditTypeIcon99"/>
+
+                    <TextView
+                        android:id="@+id/textViewCredDate99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Kredit berilgan sana:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@+id/creditDateIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/creditDateIcon99" />
+
+                    <TextView
+                        android:id="@+id/CustomerCreditDate"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxWidth="400dp"
+                        android:text="Kredit berilgan sana"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewCredDate99"
+                        app:layout_constraintStart_toStartOf="@+id/CustomerCreditType" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cancelTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            app:strokeColor="@color/red_btn_bg_color"
+            app:strokeWidth="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentStart="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Bekor Qilish"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/completeTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            app:strokeColor="@color/CardBorderColor"
+            app:strokeWidth="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentEnd="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Yakunlash"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>
+

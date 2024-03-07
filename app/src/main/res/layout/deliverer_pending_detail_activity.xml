@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deliverer.activities.DelivererPendingDetailActivity">
+    <include
+        android:id="@+id/delivererToolbar"
+        layout="@layout/deliverer_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/delivererToolbar"
+        android:layout_above="@+id/linearLayout2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/aboutCustomerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="Xaridor haqida ma'lumot"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView"
+                android:layout_below="@+id/aboutCustomerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/userIcon99"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/baseline_account_circle_48"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/LogoTextColor" />
+
+                    <TextView
+                        android:id="@+id/textViewName99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="FISH:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/userIcon99"
+                        app:layout_constraintStart_toEndOf="@+id/userIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/userIcon99" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginStart="36sp"
+                        android:id="@+id/orderListCustomerName"
+                        android:text="Xaridorning ismi va familiyasi"
+                        android:maxWidth="450dp"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/userIcon99"
+                        app:layout_constraintStart_toEndOf="@+id/textViewName99"
+                        app:layout_constraintTop_toTopOf="@+id/userIcon99" />
+
+                    <ImageView
+                        android:id="@+id/homeIcon99"
+                        android:layout_width="24dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_location_on_24"
+                        app:layout_constraintEnd_toEndOf="@+id/userIcon99"
+                        app:layout_constraintStart_toStartOf="@+id/userIcon99"
+                        app:layout_constraintTop_toBottomOf="@+id/userIcon99"
+                        app:tint="@color/LogoTextColor" />
+
+                    <TextView
+                        android:id="@+id/textViewHome99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Manzili:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/homeIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/homeIcon99" />
+
+                    <TextView
+                        android:id="@+id/orderListCustomerHouse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxWidth="200dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Xaridorning manzili"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewHome99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewHome99" />
+
+                    <ImageView
+                        android:id="@+id/streetIcon99"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/baseline_phone_48"
+                        app:layout_constraintBottom_toBottomOf="@+id/homeIcon99"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/homeIcon99"
+                        app:tint="@color/LogoTextColor" />
+
+                    <TextView
+                        android:id="@+id/textViewPhone99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Telefon raqami:"
+                        android:textColor="@color/LogoTextColor"
+                        app:layout_constraintTop_toTopOf="@+id/streetIcon99"
+                        app:layout_constraintBottom_toBottomOf="@+id/streetIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/streetIcon99"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/orderListCustomerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxWidth="200dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Telefon raqami"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewPhone99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPhone99" />
+
+                    <ImageView
+                        android:id="@+id/phoneIcon99"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/baseline_access_time_filled_48"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/orderListCustomerPhone"
+                        app:tint="@color/LogoTextColor" />
+                    <TextView
+                        android:id="@+id/textViewTime99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Buyurtma vaqti:"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneIcon99"
+                        app:layout_constraintEnd_toStartOf="@+id/phoneIcon99"
+                        app:layout_constraintTop_toTopOf="@+id/phoneIcon99"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/orderListPlacedTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:maxLength="20"
+                        android:layout_marginBottom="20dp"
+                        android:text="Buyurtma vaqti"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewTime99"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewTime99" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutCustomerTextView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Buyurtma tovarlar ro'yxati"
+                android:layout_below="@+id/cardView"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView2"
+                android:layout_below="@+id/aboutCustomerTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:id="@+id/pendingOrderDetailRecyclerView"/>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+        <LinearLayout
+            android:layout_above="@+id/linearLayout"
+            android:layout_marginStart="20dp"
+            android:id="@+id/linearLayout2"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/aboutTotalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/berkshire_swash"
+                android:gravity="center"
+                android:text="Umumiy summa:"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/orderListTotalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/berkshire_swash"
+                android:gravity="center"
+                android:text="5000000 so'm"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cancelTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            app:strokeColor="@color/red_btn_bg_color"
+            app:strokeWidth="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Bekor Qilish"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/trackTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            app:strokeColor="@color/CardBorderColor"
+            app:strokeWidth="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Yetkazish"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</RelativeLayout>

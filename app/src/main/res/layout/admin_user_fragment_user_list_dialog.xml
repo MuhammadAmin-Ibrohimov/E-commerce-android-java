@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foydalanuvchi ma'lumotlarini tahrirlash"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/LogoTextColor"
+        android:layout_margin="10dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userListNameUpdateInputLayout"
+        android:padding="5dp"
+        android:hint="F.I.SH"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/LogoTextColor"
+        app:startIconDrawable="@drawable/baseline_account_circle_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/userListNameUpdateInput"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:maxLength="25"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userListPhoneUpdateInputLayout"
+        android:padding="5dp"
+        android:hint="Telefon Raqami"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/LogoTextColor"
+        app:startIconDrawable="@drawable/baseline_phone_android_36"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/userListPhoneUpdateInput"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:maxLength="13"
+            android:inputType="phone"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userListUsernameUpdateInputLayout"
+        android:padding="5dp"
+        android:hint="Foydalanuvchi Nomi"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/LogoTextColor"
+        app:startIconDrawable="@drawable/baseline_lock_person_48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/userListUsernameUpdateInput"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userListPasswordUpdateInputLayout"
+        android:padding="5dp"
+        android:hint="Paroli"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/LogoTextColor"
+        app:startIconDrawable="@drawable/baseline_security_48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/userListPasswordUpdateInput"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userListAddressUpdateInputLayout"
+        android:padding="5dp"
+        android:hint="Manzili"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/LogoTextColor"
+        app:startIconDrawable="@drawable/baseline_location_on_48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/userListAddressUpdateInput"
+            android:textSize="14sp"
+            android:maxLines="3"
+            android:maxLength="50"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/addUserLinearLayout6"
+        android:layout_marginTop="5dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
+            app:errorEnabled="true"
+            app:startIconTint="@color/LogoTextColor"
+            app:startIconDrawable="@drawable/round_monetization_on_48"
+            android:id="@+id/addUserUserCashSalaryPercentL"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="10dp"
+            android:hint="Naqd foyda (%)"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addUserUserCashSalaryPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:textSize="14sp"
+                tools:ignore="TextSizeCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/addUserUserCreditSalaryPercentL"
+            app:errorEnabled="true"
+            android:layout_marginEnd="10dp"
+            app:startIconTint="@color/LogoTextColor"
+            app:startIconDrawable="@drawable/baseline_money_48"
+            android:layout_marginStart="15dp"
+            android:maxLength="2"
+            android:hint="Kredit foyda (%)"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addUserUserCreditSalaryPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLength="2"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/userListAddressUpdateCompleteCard"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_weight="1"
+        android:checkable="true"
+        android:layout_margin="10dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/CardBorderColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/CardBorderColor">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="14sp"
+                android:padding="5sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_height="match_parent"
+                android:text="Tasdiqlash"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

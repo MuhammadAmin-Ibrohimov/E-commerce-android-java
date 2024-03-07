@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saralash"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/priceTextView"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/LogoTextColor"
+        android:textSize="32sp"/>
+
+    <!-- add RadioGroup which contain the many RadioButton-->
+    <RadioGroup
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/priceTextView"
+        android:id="@+id/groupradio"
+        android:layout_margin="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- In RadioGroup create the 1 Radio Button-->
+        <!-- like this we will add some more Radio Button-->
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/sortNameA"
+            android:text="Nomi bo'yicha (A-Z)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortNameZ"
+            android:text="Nomi bo'yicha (Z-A)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/sortPriceA"
+            android:text="Narxi bo'yicha (min-max)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortPriceZ"
+            android:text="Narxi bo'yicha (max-min)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/sortBrandA"
+            android:text="Brandi bo'yicha (A-Z)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortBrandZ"
+            android:text="Brand bo'yicha (Z-A)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:visibility="visible"
+            android:id="@+id/sortCategoryA"
+            android:text="Katalog bo'yicha (A-Z)"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortCategoryZ"
+            android:text="Katalog bo'yicha (Z-A)"
+            android:textSize="26sp"/>
+
+    </RadioGroup>
+
+    <!-- add button For Submit the Selected item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/groupradio"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cancelCard"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/CardBorderColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/RankColor"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="10dp"
+                    android:text="Bekor qilish"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/confirmCard"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/CardBorderColor"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/CardInnerColor"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="10dp"
+                    android:text="Tasdiqlash"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+
+</RelativeLayout>

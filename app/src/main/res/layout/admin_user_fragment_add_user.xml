@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.fragments.AdminUserFragmentAddUser"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/addNewUserTextView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Yangi foydalanuvchi qo'shish"
+            android:textColor="@color/LogoTextColor"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout1"
+            app:layout_constraintTop_toBottomOf="@+id/addNewUserTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addUserUserNameL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                android:hint="F.I.SH"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/addUserUserName"
+                    android:textSize="14sp"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addUserUserStatusL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
+                android:hint="Foydalanuvchi Statusi">
+
+                <AutoCompleteTextView
+                    android:id="@+id/addUserUserStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout2"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                app:errorEnabled="true"
+                app:prefixText="+998 "
+                android:id="@+id/addUserUserPhoneL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginStart="30dp"
+                android:hint="Telefon raqam"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addUserUserPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:maxLength="9"
+                    android:textSize="14sp"
+                    tools:ignore="TextSizeCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/addUserUserUsernameL"
+                app:errorEnabled="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="15dp"
+                android:hint="Foydalanuvchi nomi"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addUserUserUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout3"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/addUserUserPasswordL"
+                app:errorEnabled="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Parol"
+                app:endIconMode="password_toggle"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/addUserUserPassword"
+                    android:textSize="14sp"
+
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/addUserUserImage"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:checkable="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/CardBorderColor"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/CardInnerColor">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:padding="14sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_height="match_parent"
+                        android:text="Rasm yuklash"/>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/addUserUserAddressL"
+                android:hint="Manzil"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/addUserUserAddress"
+                    android:textSize="16sp"
+                    android:maxLength="70"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout6"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                app:errorEnabled="true"
+                android:id="@+id/addUserUserCashSalaryPercentL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginStart="30dp"
+                android:hint="Naqd foyda (%)"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addUserUserCashSalaryPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:maxLength="2"
+                    android:textSize="14sp"
+                    tools:ignore="TextSizeCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/addUserUserCreditSalaryPercentL"
+                app:errorEnabled="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="15dp"
+                android:maxLength="2"
+                android:hint="Kredit foyda (%)"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addUserUserCreditSalaryPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:maxLength="2"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/adssd"
+            android:layout_marginStart="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout6"
+           android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/addUserLinearLayout5"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/adssd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/addUserUserImageShowCard"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:checkable="true"
+                    app:strokeWidth="1dp"
+                    android:layout_gravity="center"
+                    app:strokeColor="@color/CardBorderColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/addUserUserImageShow"
+                        android:padding="5dp"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        app:srcCompat="@drawable/lider" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:text="F.I.SH"/>
+                <TextView
+                    android:id="@+id/addUserUserNameShow"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    android:text="To'ldirish talab etiladi!"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content"
+                    android:text="Manzil"/>
+                <TextView
+                    android:id="@+id/addUserUserAddressShow"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="To'ldirish talab etiladi!"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="Foydalanuvchi nomi"/>
+                <TextView
+                    android:id="@+id/addUserUserUsernameShow"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="To'ldirish talab etiladi!"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="Parol"/>
+                <TextView
+                    android:id="@+id/addUserUserPasswordShow"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="@color/LogoTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"
+                    android:text="To'ldirish talab etiladi!"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addUserLinearLayout5">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/addUserCancelCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="10dp"
+                app:strokeColor="@color/CardBorderColor"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/RankColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="10dp"
+                        android:text="Bekor qilish"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/addUserConfirmCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="10dp"
+                app:strokeColor="@color/CardBorderColor"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/CardInnerColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="10dp"
+                        android:text="Tasdiqlash"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

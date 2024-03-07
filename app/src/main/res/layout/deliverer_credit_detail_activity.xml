@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentTop="true"
+    android:layout_height="match_parent"
+    tools:context=".deliverer.activities.DelivererCreditDetailActivity">
+    <include
+        android:id="@+id/delivererToolbar"
+        layout="@layout/deliverer_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/delivererToolbar"
+        android:layout_above="@+id/linearLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/aboutCustomerTextView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="Buyurtma tovarlar ro'yxati"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView2"
+                android:layout_below="@+id/aboutCustomerTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="@color/LogoTextColor"
+                app:strokeWidth="1sp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:id="@+id/creditDetailRecyclerView"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="5sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/longLineBreaker"
+                        android:background="@color/LogoTextColor" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/orderTotalPrice"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/LogoTextColor"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:text="Umumiy summa: 5000000 so'm"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cancelTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            app:strokeColor="@color/red_btn_bg_color"
+            app:strokeWidth="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentStart="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Bekor Qilish"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/completeTheOrderCard"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            app:strokeColor="@color/CardBorderColor"
+            app:strokeWidth="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentEnd="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Yakunlash"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>

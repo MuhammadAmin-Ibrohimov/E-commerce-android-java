@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deliverer.activities.DelivererMainActivity">
+    <include
+        android:id="@+id/delivererToolbar"
+        layout="@layout/deliverer_toolbar" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:layout_below="@+id/delivererToolbar"
+        android:id="@+id/framelayout"
+        android:layout_height="match_parent"/>
+
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:contentDescription="Bottom Bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:iconSize="32dp"
+        android:padding="5dp"
+        app:textSize="25sp"
+        app:itemFontFamily="@font/roboto"
+        app:iconTintActive="@color/LogoTextColor"
+        app:iconTint="@color/LogoTextColor"
+        app:indicatorColor="#DCDCDC"
+        app:textColor="@color/LogoTextColor"
+        android:layout_alignParentBottom="true"
+        app:backgroundColor="@color/white"
+        app:menu="@menu/deliverer_bottom_menu"
+        />
+
+</RelativeLayout>

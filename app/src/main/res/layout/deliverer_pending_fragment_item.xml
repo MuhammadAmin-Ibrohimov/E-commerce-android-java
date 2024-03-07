@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/LogoTextColor"
+        app:strokeWidth="1sp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/homeIcon99"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="20dp"
+                app:tint="@color/LogoTextColor"
+                android:src="@drawable/baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewHome99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Manzil:"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/homeIcon99"
+                app:layout_constraintTop_toTopOf="@+id/homeIcon99" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/orderListCustomerHouse"
+                android:text="Xaridorning manzili"
+                android:maxWidth="400dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewHome99"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHome99" />
+
+            <ImageView
+                android:id="@+id/streetIcon99"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/baseline_phone_48"
+                app:layout_constraintEnd_toEndOf="@+id/homeIcon99"
+                app:layout_constraintStart_toStartOf="@+id/homeIcon99"
+                app:layout_constraintTop_toBottomOf="@+id/orderListCustomerHouse"
+                app:tint="@color/LogoTextColor" />
+            <TextView
+                android:id="@+id/textViewPhone99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Telefon raqam:"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/streetIcon99"
+                app:layout_constraintTop_toTopOf="@+id/streetIcon99" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/orderListCustomerPhone"
+                android:text="Telefon raqami"
+                android:maxWidth="200dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewPhone99"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPhone99" />
+            <ImageView
+                android:id="@+id/customerIcon99"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/baseline_account_circle_48"
+                app:layout_constraintBottom_toBottomOf="@+id/homeIcon99"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/homeIcon99"
+                app:tint="@color/LogoTextColor" />
+            <TextView
+                android:id="@+id/textViewName99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="F.I.SH.:"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/customerIcon99"
+                app:layout_constraintEnd_toStartOf="@+id/customerIcon99"
+                app:layout_constraintTop_toTopOf="@+id/customerIcon99"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/orderListCustomerName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textEnd"
+                android:maxWidth="300dp"
+                android:text="Mamadaliev Dilshodjon"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewName99"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName99" />
+
+            <ImageView
+                android:id="@+id/phoneIcon99"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/baseline_access_time_filled_48"
+                app:layout_constraintEnd_toEndOf="@+id/customerIcon99"
+                app:layout_constraintTop_toBottomOf="@+id/orderListCustomerName"
+                app:tint="@color/LogoTextColor" />
+            <TextView
+                android:id="@+id/textViewTime99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Buyurtma vaqti:"
+                android:textColor="@color/LogoTextColor"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/phoneIcon99"
+                app:layout_constraintEnd_toStartOf="@+id/phoneIcon99"
+                app:layout_constraintTop_toTopOf="@+id/phoneIcon99"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/orderListPlacedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:maxLength="20"
+                android:text="Buyurtma vaqti"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTime99"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTime99" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/longLineBreaker"
+                android:layout_marginBottom="10dp"
+                android:background="@color/LogoTextColor"
+                app:layout_constraintEnd_toEndOf="@+id/phoneIcon99"
+                app:layout_constraintStart_toStartOf="@+id/streetIcon99"
+                app:layout_constraintTop_toBottomOf="@+id/orderListCustomerPhone" />
+
+            <ImageView
+                android:id="@+id/moneyIcon99"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/round_monetization_on_48"
+                app:layout_constraintEnd_toEndOf="@+id/streetIcon99"
+                app:layout_constraintStart_toStartOf="@+id/streetIcon99"
+                app:layout_constraintTop_toBottomOf="@+id/longLineBreaker"
+                app:tint="@color/LogoTextColor" />
+            <TextView
+                android:id="@+id/textViewMoney99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Umumiy summa: "
+                android:textColor="@color/LogoTextColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/moneyIcon99"
+                app:layout_constraintTop_toTopOf="@+id/moneyIcon99" />
+
+
+            <TextView
+                android:id="@+id/orderListTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:maxLength="15"
+                android:text="5000000 so'm"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewMoney99"
+                app:layout_constraintStart_toStartOf="@+id/textViewTime99"
+                app:layout_constraintTop_toTopOf="@+id/textViewMoney99" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/checkTheOrderDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moneyIcon99">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/LogoTextColor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="5dp"
+                        android:text="Buyurtmani ko'rib chiqish"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

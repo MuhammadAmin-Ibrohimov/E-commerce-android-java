@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <solid android:color="@android:color/white" />
+    <stroke android:width="1dip" android:color="#4fa5d5"/>
+    <corners android:topLeftRadius="10dp"/>
+    <gradient android:startColor="@color/CardBorderColor"
+        android:endColor="@color/CardBorderColor"/>
+</shape>

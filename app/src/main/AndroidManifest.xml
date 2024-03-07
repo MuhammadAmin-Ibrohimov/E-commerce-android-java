@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LiderTrade"
+        tools:targetApi="31">
+        <activity
+            android:name=".admin.activities.AdminOrderCreditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deliverer.activities.DelivererCreditDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminOrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminOrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deliverer.activities.DelivererMainActivity"
+            android:exported="false" /> <!-- Deliverer activities Start -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".deliverer.activities.DelivererSendingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deliverer.activities.DelivererPendingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deliverer.activities.DelivererMapActivity"
+            android:exported="false" /> <!-- Deliverer activities End -->
+        <!-- Seller Activities Start -->
+        <activity
+            android:name=".seller.activities.SellerAllProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.activities.SellerCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.activities.SellerProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.activities.SellerProductListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.activities.SellerSubcategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".seller.activities.SellerHomeActivity"
+            android:exported="false" /> <!-- Seller Activities End -->
+<!--         Admin Activities Start -->
+         <activity
+         android:name=".admin.activities.AdminMainActivity"
+         android:exported="false" /> <!-- Admin Activities End -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAo1ihuyi1fwZ8f-sdkB4zvTCshKWCqRp8" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

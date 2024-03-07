@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sellerToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/deliverer_toolbar_logo_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/deliverer_toolbar_logo"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/logo" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/lider_trade"
+        android:textColor="@color/LogoTextColor"
+        android:textSize="28sp"
+        android:textStyle="" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/seller_toolbar_cart_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="64dp"
+        app:cardElevation="10dp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/seller_toolbar_cart"
+        android:padding="5dp"
+        android:tint="@color/CardBorderColor"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/baseline_notifications_none_48" />
+</LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.Toolbar>

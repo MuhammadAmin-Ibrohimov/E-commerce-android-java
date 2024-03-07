@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lider Trade</string>
+    <string name="lider_trade">Lider Trade</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categoryName">Category Name</string>
+    <string name="productName">Product Name</string>
+    <string name="scrollview">ScrollVeiw</string>
+    <string name="product_name">Product Name</string>
+    <string name="_3000000">3000000</string>
+    <string name="so_m">so\'m</string>
+    <string name="maxsulot_uchun_berilgan_ta_rif">Maxsulot uchun berilgan ta\'rif</string>
+    <string name="xususiyatlari">Xususiyatlari</string>
+    <string name="savatchaga_qo_shish">Savatchaga qo\'shish</string>
+    <string name="ta_rif">Ta\'rif</string>
+    <string name="_1">1</string>
+    <string name="foydalanuvchi_nomi">Foydalanuvchi nomi</string>
+    <string name="foydalanuvchi_paroli">Foydalanuvchi paroli</string>
+    <string name="tasdiqlash">Tasdiqlash</string>
+    <string name="content_description_end_icon">content_description_end_icon</string>
+    <string name="search_hint">search hint</string>
+</resources>

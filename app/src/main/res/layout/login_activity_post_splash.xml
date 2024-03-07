@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".LoginActivity"
+        android:layout_width="match_parent"
+        app:layoutDescription="@xml/motion_scene_splash"
+        android:layout_height="match_parent"
+        >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:contentDescription="TODO"
+        android:rotation="360"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:alpha="1"
+        android:id="@+id/linearLayout"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/liderTrade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/lider_trade"
+                android:textAlignment="center"
+                android:textColor="@color/CardBorderColor"
+                android:textSize="36sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Foydalanuvchi nomi"
+                app:errorEnabled="true"
+                android:textColor="@color/CardBorderColor"
+                android:textColorHint="@color/CardBorderColor"
+                app:boxStrokeColor="@color/CardBorderColor"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/CardBorderColor"
+                app:startIconDrawable="@drawable/baseline_account_circle_36"
+                app:startIconTint="@color/CardBorderColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Foydalanuvchi paroli"
+                android:textColor="@color/CardBorderColor"
+                android:textColorHint="@color/CardBorderColor"
+                app:boxStrokeColor="@color/CardBorderColor"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:endIconTint="@color/CardBorderColor"
+                app:startIconDrawable="@drawable/baseline_security_48"
+                app:startIconTint="@color/CardBorderColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/elevatedButton"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/RankColor"
+                android:text="Tasdiqlash"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:elevation="10dp"
+                app:icon="@drawable/baseline_input_36"
+                app:iconSize="20sp"
+                app:iconTint="@color/white"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall" />
+        </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

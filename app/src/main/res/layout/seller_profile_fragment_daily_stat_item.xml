@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:id="@+id/lll">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sellingDailName"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:background="@drawable/just_border"
+            android:textColor="@color/LogoTextColor"
+            android:fontFamily="@font/roboto_medium"
+            android:text="CustomerName"
+            android:textSize="12sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sellingDailyPhoneNumber"
+                android:padding="5dp"
+                android:background="@drawable/just_border"
+                android:textColor="@color/LogoTextColor"
+                android:fontFamily="@font/roboto_medium"
+                android:text="PhoneNumber"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/just_border"
+                android:id="@+id/sellingDailyPackageStatus"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textColor="@color/LogoTextColor"
+                android:fontFamily="@font/roboto_medium"
+                android:text="PackageStatus"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

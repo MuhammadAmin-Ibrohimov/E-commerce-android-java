@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1096692753321",
+    "project_id": "lider-trade-fa310",
+    "storage_bucket": "lider-trade-fa310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096692753321:android:eabea8df00e52795661ab8",
+        "android_client_info": {
+          "package_name": "com.example.lidertrade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096692753321-mv1cloquftc286an54qsbdp5qqeh6pgk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX215-Wzhllwqhj_AZCPYjIf5vcZY8clI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096692753321-mv1cloquftc286an54qsbdp5qqeh6pgk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/order_pending_fragment_menu"
+        android:title="Buyurtmalar"
+        android:icon="@drawable/baseline_checklist_48"/>
+    <item
+        android:id="@+id/order_sending_fragment_menu"
+        android:title="Yetkazilayotganlar"
+        android:icon="@drawable/baseline_business_center_48"/>
+    <item
+        android:id="@+id/order_credit_fragment_menu"
+        android:title="Kreditlar"
+        android:icon="@drawable/baseline_account_balance_24"/>
+</menu>

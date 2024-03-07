@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/seller_home_fragment_menu"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/seller_category_fragment_menu"
+        android:title="Category"
+        android:icon="@drawable/category"/>
+    <item
+        android:id="@+id/seller_cart_fragment_menu"
+        android:title="Seacrh"
+        android:icon="@drawable/shopping_cart"/>
+    <item
+        android:id="@+id/seller_search_fragment_menu"
+        android:title="Seacrh"
+        android:icon="@drawable/search"/>
+    <item
+        android:id="@+id/seller_profile_fragment_menu"
+        android:title="Profile"
+        android:icon="@drawable/user"/>
+
+</menu>

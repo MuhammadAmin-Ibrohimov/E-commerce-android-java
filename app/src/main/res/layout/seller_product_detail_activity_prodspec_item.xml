@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:weightSum="2"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/prodSpecField"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/LogoTextColor"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/spec_models_bg"
+        android:text="field"
+        android:textSize="32sp"/>
+    <TextView
+        android:id="@+id/prodSpecName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/LogoTextColor"
+        android:fontFamily="@font/roboto"
+        android:padding="10dp"
+        android:background="@drawable/spec_models_bg"
+        android:text="name"
+        android:textSize="32sp"/>
+
+
+</LinearLayout>

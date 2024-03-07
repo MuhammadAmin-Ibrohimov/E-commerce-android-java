@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/productListCardView"
+        android:layout_width="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        style="?attr/materialCardViewFilledStyle"
+        android:elevation="10dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/sPLAILineraLayout"
+                android:orientation="vertical">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sPLAIQuantityCard"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="-40dp"
+                    android:layout_toEndOf="@+id/prodPic"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="15dp"
+                    android:visibility="invisible"
+                    app:strokeWidth="1sp"
+                    app:strokeColor="@color/CardBorderColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/seller_home_category_item_linear"
+                        android:layout_height="wrap_content"
+                        android:background="@color/RankColor"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="36dp"
+                            android:id="@+id/sPLAIQuantity"
+                            android:layout_height="36dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="@string/_1"
+                            android:textSize="24sp"
+                            />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/prodPic"
+                    android:layout_width="160dp"
+                    android:outlineProvider="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="120dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="0"
+                    app:iss_period="3000" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:maxLength="30"
+                    android:gravity="center"
+                    android:text="@string/productName"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/LogoTextColor"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="12sp"
+                    android:id="@+id/price"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/LogoTextColor"
+                    android:layout_height="0dp"
+                    android:text="5000000 so'm"
+                    android:layout_weight="1"/>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/sPLAddTheCartCard"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:background="@color/RankColor">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:layout_height="wrap_content"
+                            android:text="Xarid qilish"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

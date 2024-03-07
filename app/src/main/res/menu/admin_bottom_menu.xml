@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adminReportBottomBar"
+        android:title="Report"
+        android:icon="@drawable/analysis"/>
+
+    <item
+        android:id="@+id/adminOrderBottomBar"
+        android:title="Buyurtmalar"
+        android:icon="@drawable/order"/>
+    <item
+        android:id="@+id/adminProductAddBottomBar"
+        android:title="Maxsulotlar"
+        android:icon="@drawable/add_to_basket"/>
+
+    <item
+        android:id="@+id/adminProductBottomBar"
+        android:title="Kataloglar"
+        android:icon="@drawable/product"/>
+
+
+    <item
+        android:id="@+id/adminUserBottomBar"
+        android:title="Foydalanuvchilar"
+        android:icon="@drawable/users"/>
+</menu>

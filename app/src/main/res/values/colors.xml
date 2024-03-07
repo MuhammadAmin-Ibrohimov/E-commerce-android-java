@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="LogoTextColor">#515C6F</color>
+    <color name="IconSecondaryTint">#A9ABAF</color>
+    <color name="CardBorderColor">#005AC1</color>
+    <color name="CardInnerColor">#A1005AC1</color>
+
+
+    <color name="SendingOrders">#0A305B</color>
+    <color name="CanceledOrders">#4F0702</color>
+    <color name="CompletedOrders">#26381B</color>
+    <color name="PendingOrders">#983C03</color>
+    <color name="RankColor">#FF9800</color>
+    <color name="PriceColor">#C6148C</color>
+
+
+</resources>
